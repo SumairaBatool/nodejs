@@ -1,0 +1,55 @@
+*{
+
+    padding: 0;
+    margin: 0;box-sizing: border-box;
+    list-style: none;
+}
+
+.bars{
+    display: none;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+.large-ul{
+    display: flex;
+    gap: 40px;
+}
+
+@media screen and (max-width:768px) {
+    .navbar{
+        position: relative;
+        z-index: 898;
+        overflow: hidden;
+    }
+    .large-ul{
+        display: none;
+    }
+    .bars{
+        display: block;
+        z-index: 89;
+    }
+    .mobile{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+       
+        background-color: blueviolet;
+        padding: 30px;
+    }
+    #inp:checked ~ .mobile{
+        display: block;
+      
+       
+    }
+}
